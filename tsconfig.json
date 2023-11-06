@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "strict": false,
+    "strictNullChecks": false,
+    "esModuleInterop": true,
+    "noImplicitAny": false,
+    "outDir": "./dist/",
+    "sourceMap": true,
+    "module": "commonjs",
+    "target": "es5",
+    "jsx": "react",
+    "noUnusedLocals": true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "lib": ["esnext", "dom", "es2015.core"],
+    "baseUrl": "./",
+    "forceConsistentCasingInFileNames": true,
+    "paths": {
+      "react": ["./node_modules/@types/react"],
+      "~/*": ["./*"]
+    },
+    "pretty": true
+  },
+  "exclude": ["node_modules"]
+}

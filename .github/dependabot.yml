@@ -1,0 +1,29 @@
+version: 2
+updates:
+  - package-ecosystem: 'npm'
+    directory: '/'
+    registries:
+      - infotracknpm
+    schedule:
+      interval: 'weekly'
+    open-pull-requests-limit: 20
+
+  - package-ecosystem: 'nuget'
+    directory: '/'
+    registries:
+      - infotracknuget
+    schedule:
+      interval: 'weekly'
+    open-pull-requests-limit: 20
+
+registries:
+  infotracknuget:
+    type: nuget-feed
+    url: https://proget.infotrack.com.au/nuget/global
+    username: ${{secrets.PROGET_USERNAME}}
+    password: ${{secrets.PROGET_PASSWORD}}
+  infotracknpm:
+    type: npm-registry
+    url: https://proget.infotrack.com.au/npm/global-npm
+    username: ${{secrets.PROGET_USERNAME}}
+    password: ${{secrets.PROGET_PASSWORD}}
